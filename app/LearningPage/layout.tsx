@@ -23,13 +23,13 @@ const Layout = (props: learningpageprops) => {
   return (
     <main>
       <Navbar heading="Learning" />
-      <div className="flex gap-3 flex-col mt-[50px] lg:ml-[50px]">
+      <div className="flex px-3 gap-3 flex-col mt-[50px] lg:ml-[50px]">
         <ul className="flex gap-3 text-sm items-center justify-start md:items-start px-2 capitalize">
           {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="relative p-3 text-sm font-semibold text-black-100 z-20"
+                className="relative p-3 text-sm font-semibold text-black-100 z-20 md:w-full"
               >
                 {link.label}
                 {link.href === path && (

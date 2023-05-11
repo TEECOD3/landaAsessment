@@ -14,48 +14,46 @@ interface ShortCourseItemProps {
 const ShortCourseItem: FC<ShortCourseItemProps> = (props) => {
   const { program, course, progress, status } = props;
 
-  let statusblock = (
-    <Button className="bg-blue-700 text-white mt-4 " variant="default">
-      continue
-    </Button>
-  );
+  let statusblock = <Button className="w-full md:w-11/12 ">Continue</Button>;
 
   if (status === "completed") {
     statusblock = (
-      <div className="bg-green-100 rounded-lg mt-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
-        <h3 className="text-green-200 font-bold ">{status}</h3>
+      <div className="w-full justify-start flex ">
+        <div className="bg-green-100 rounded-lg p-1 bg-red mt-4  md:w-[6rem] flex item-center justify-center text-sm">
+          <h3 className="text-green-200 font-bold ">{status}</h3>
+        </div>
       </div>
     );
   }
   return (
-    <div className="w-full border-gray/50 mt-6 border-[1px] p-6 bg-blue-400 flex flex-col md:flex-row justify-between md:items-center ">
-      <div className="flex relative  w-full lg:w-3/6 gap-4">
-        <Image
-          src={computerimg}
-          alt="courseitemimage"
-          className=" h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem]"
-        />
+    <div className=" border-gray/50 mt-6 border-[1px] px-3 py-3 lg:p-6 bg-blue-400 ">
+      <div className="flex flex-col md:flex-row w-full gap-4 mt-4">
+        <div className="flex gap-3 md:w-5/6 ">
+          <Image
+            src={computerimg}
+            alt="image"
+            className="h-[3rem] w-[3rem]   md:h-[5rem] md:w-[5rem]"
+          ></Image>
+          <div className="flex md:flex-col w-full justify-between">
+            <div className="w-full mb-3">
+              <h4 className="font-medium text-blue-300 capitalize ">
+                {program}
+              </h4>
+              <h3 className=" text-[14px] font-semibold capitalize">
+                {course}
+              </h3>
+            </div>
 
-        <div className="flex md:flex-col mb-4  flex-wrap ">
-          <div className="flex-col flex text-sm md:text-base">
-            <h4 className=" capitalize text-base text-blue-300 font-normal">
-              {program}
-            </h4>
-            <p className="font-bold md:text-base text-base text-black-100 ">
-              {course}
-            </p>
-            {status === "completed" ? (
-              <p></p>
-            ) : (
-              <div className="absolute md:static top-4 right-1">
-                <Progressbar progress={progress} />
-              </div>
-            )}
+            <div className="flex items-center justify-center h-full  w-1/3 md:w-full">
+              <Progressbar progress={progress} />
+            </div>
           </div>
         </div>
-      </div>
 
-      {statusblock}
+        <div className=" md:w-1/5   flex items-center justify-center p-4">
+          {statusblock}
+        </div>
+      </div>
     </div>
   );
 };
