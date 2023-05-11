@@ -24,8 +24,9 @@ const Learning = () => {
           </div>
 
           <div className="mt-4 w-full">
-            <Courseitem />
-            <Courseitem />
+            <Courseitem status="ongoing" />
+            <Courseitem status="suspended" />
+            <Courseitem status="completed" />
           </div>
         </div>
       </section>

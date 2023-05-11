@@ -3,9 +3,13 @@ import { FC } from "react";
 import Image from "next/image";
 import computerimg from "../../../public/computersciimg.png";
 
-interface CourseitemProps {}
+interface CourseitemProps {
+  status: "suspended" | "completed" | "ongoing";
+}
 
-const Courseitem: FC<CourseitemProps> = () => {
+const Courseitem: FC<CourseitemProps> = (props: CourseitemProps) => {
+  const { status } = props;
+
   return (
     <div className="w-full mt-6 p-6 bg-blue-400 flex flex-col md:flex-row justify-between md:items-center ">
       <div className="flex flex-col md:flex-row w-full lg:w-3/6 gap-3 md:gap-6">
@@ -27,7 +31,7 @@ const Courseitem: FC<CourseitemProps> = () => {
 
       {
         <div className="bg-orange-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
-          <h3 className="text-orange-200">ongoing</h3>
+          <h3 className="text-orange-200">{status}</h3>
         </div>
       }
     </div>

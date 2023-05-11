@@ -13,14 +13,9 @@ type mobilenav = {
 const MobileNav = (props: mobilenav) => {
   const { setshownav } = props;
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ delay: 0.3, duration: 0.5 }}
-    >
-      <div className="h-[100vh] w-[100vw] bg-white z-30 fixed ">
-        <div className="min-h-[100%] border-r border-gray/40 bg-blue-100 flex flex-col justify-around  w-full">
+    <motion.div initial={{ x: 300 }} animate={{ x: 0 }}>
+      <div className="h-[100vh] w-[100vw] bg-white z-[900] fixed ">
+        <div className="min-h-[90%] border-r border-gray/40 bg-blue-100 flex flex-col justify-around  w-full">
           <div className="flex flex-col justify-between  p-5">
             <div className="p-4">
               <LandaIcon />
