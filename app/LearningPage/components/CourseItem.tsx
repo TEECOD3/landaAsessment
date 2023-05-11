@@ -10,6 +10,26 @@ interface CourseitemProps {
 const Courseitem: FC<CourseitemProps> = (props: CourseitemProps) => {
   const { status } = props;
 
+  let statusblock = (
+    <div className="bg-orange-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
+      <h3 className="text-orange-200">ongoing</h3>
+    </div>
+  );
+  if (status === "suspended") {
+    statusblock = (
+      <div className="bg-green-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
+        <h3 className="text-green-200">suspended</h3>
+      </div>
+    );
+  }
+  if (status === "completed") {
+    statusblock = (
+      <div className="bg-green-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
+        <h3 className="text-green-200">completed</h3>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full mt-6 p-6 bg-blue-400 flex flex-col md:flex-row justify-between md:items-center ">
       <div className="flex flex-col md:flex-row w-full lg:w-3/6 gap-3 md:gap-6">
@@ -29,11 +49,7 @@ const Courseitem: FC<CourseitemProps> = (props: CourseitemProps) => {
         </div>
       </div>
 
-      {
-        <div className="bg-orange-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
-          <h3 className="text-orange-200">{status}</h3>
-        </div>
-      }
+      {statusblock}
     </div>
   );
 };

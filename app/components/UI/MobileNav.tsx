@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import LandaIcon from "@/public/icons/landa";
 import DashBoardIcon from "@/public/icons/DashboardIcon";
-import LearningIcon from "@/public/icons/LearningpageIcon";
+import { MdOutlineMenuBook } from "react-icons/md";
 import Arrowright from "@/public/icons/ArrowRight";
 import LogoutIcon from "@/public/icons/Logout";
 import { motion } from "framer-motion";
@@ -13,9 +13,13 @@ type mobilenav = {
 const MobileNav = (props: mobilenav) => {
   const { setshownav } = props;
   return (
-    <motion.div initial={{ x: 300 }} animate={{ x: 0 }}>
-      <div className="h-[100vh] w-[100vw] bg-white z-[900] fixed ">
-        <div className="min-h-[90%] border-r border-gray/40 bg-blue-100 flex flex-col justify-around  w-full">
+    <motion.div
+      initial={{ x: 300 }}
+      animate={{ x: 0 }}
+      className="z-[9000] fixed "
+    >
+      <div className="h-[100vh] w-[100vw] bg-white z-[900] fixed">
+        <div className="min-h-[100%] border-r border-gray/40 bg-blue-100 flex flex-col justify-around  w-full">
           <div className="flex flex-col justify-between  p-5">
             <div className="p-4">
               <LandaIcon />
@@ -30,11 +34,11 @@ const MobileNav = (props: mobilenav) => {
                 dashboard
               </Link>
               <Link
-                href="/learning"
+                href="/LearningPage"
                 className="w-[90%] p-4  flex gap-6 "
                 onClick={setshownav}
               >
-                <LearningIcon className="text-black-100" />
+                <MdOutlineMenuBook className="text-black-100 text-3xl" />
                 Learning
               </Link>
             </div>

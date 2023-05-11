@@ -13,8 +13,8 @@ type learningpageprops = {
 };
 
 const links = [
-  { href: "/learning", label: " programes & degrees" },
-  { href: "/learning/shortcourses", label: "shortcourses" },
+  { href: "/LearningPage", label: " programes & degrees" },
+  { href: "/LearningPage/ShortcoursesPage", label: "shortcourses" },
 ];
 const Layout = (props: learningpageprops) => {
   const { children } = props;
