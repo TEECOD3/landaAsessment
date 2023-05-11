@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../components/UI/Button";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/UI/Navbar";
 import NavLink from "../components/UI/Nav-link";
 import "tailwindcss/tailwind.css";
 import { useRouter } from "next/router";
@@ -13,7 +13,7 @@ const Layout = (props: learningpageprops) => {
   const { children } = props;
   return (
     <main>
-      <Navbar />
+      <Navbar heading="Learning" />
       <div className="flex gap-3 flex-col mt-[50px] lg:ml-[50px]">
         <ul className="flex gap-3 text-sm items-center justify-center md:items-start md:justify-start ">
           <li className="">
