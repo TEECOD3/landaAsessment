@@ -17,7 +17,7 @@ const MobileNav = (props: mobilenav) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ delay: 0.2, duration: 0.2 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
     >
       <div className="h-[100vh] w-[100vw] bg-white z-30 fixed ">
         <div className="min-h-[100%] border-r border-gray/40 bg-blue-100 flex flex-col justify-around  w-full">

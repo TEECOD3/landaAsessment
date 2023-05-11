@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Input from "../components/UI/input";
 import Courseitem from "./components/CourseItem";
 import Filter from "@/public/icons/Filter";
-import { AnimatePresence } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Learning",
@@ -13,26 +12,24 @@ export const metadata: Metadata = {
 const Learning = () => {
   return (
     <>
-      <AnimatePresence>
-        <section className="px-3 md:px-0 w-full ">
-          <div className="w-full lg:w-4/6 px-4 ">
-            <div className="flex gap-4">
-              <Input
-                inputs={{ placeholder: "search for programs" }}
-                className="focus:border-gray focus:border-[1px] rounded-none border-gray border-[1px]"
-              />
-              <div className="p-4 border-gray border-[1px] flex item-center justify-center ">
-                <Filter />
-              </div>
-            </div>
-
-            <div className="mt-4 w-full">
-              <Courseitem />
-              <Courseitem />
+      <section className="px-3 md:px-0 w-full ">
+        <div className="w-full lg:w-4/6 px-4 ">
+          <div className="flex gap-4">
+            <Input
+              inputs={{ placeholder: "search for programs" }}
+              className="focus:border-gray focus:border-[1px] rounded-none border-gray border-[1px]"
+            />
+            <div className="p-4 border-gray border-[1px] flex item-center justify-center ">
+              <Filter />
             </div>
           </div>
-        </section>
-      </AnimatePresence>
+
+          <div className="mt-4 w-full">
+            <Courseitem />
+            <Courseitem />
+          </div>
+        </div>
+      </section>
     </>
   );
 };
