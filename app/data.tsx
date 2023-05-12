@@ -37,7 +37,7 @@ export const shortcoursedata = [
   {
     id: 3,
     program: "Google",
-    course: "python for data analysis",
+    course: "UX Fundamentals",
     progress: 100,
     status: "completed",
   },

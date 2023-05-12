@@ -24,7 +24,7 @@ const Layout = (props: learningpageprops) => {
     <main>
       <Navbar heading="Learning" />
       <div className="flex gap-3 flex-col mt-[50px] lg:ml-[50px]">
-        <ul className="flex gap-3 text-sm items-center justify-center md:items-start md:justify-start ">
+        <ul className="flex gap-3 text-sm items-center justify-start md:items-start px-2 capitalize">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -40,7 +40,7 @@ const Layout = (props: learningpageprops) => {
           ))}
         </ul>
 
-        <div className="md:ml-8 lg:ml-2 mt-4">{children}</div>
+        <div className="mt-4">{children}</div>
       </div>
     </main>
   );

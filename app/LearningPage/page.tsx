@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 const Learning = () => {
   return (
     <>
-      <section className="px-3 md:px-0 w-full ">
-        <div className="w-full lg:w-4/6 px-4 ">
+      <section className="w-full ">
+        <div className="w-full lg:w-4/6 px-2">
           <div className="flex gap-4">
             <Input
               inputs={{ placeholder: "search for programs" }}
