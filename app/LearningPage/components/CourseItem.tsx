@@ -13,20 +13,20 @@ const Courseitem: FC<CourseitemProps> = (props: CourseitemProps) => {
   const { status, school, degree } = props;
 
   let statusblock = (
-    <div className="bg-orange-100 rounded-lg py-1  w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
+    <div className="bg-orange-100 rounded-lg py-1 mt-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
       <h3 className="text-orange-200 font-bold">{status}</h3>
     </div>
   );
   if (status === "suspended") {
     statusblock = (
-      <div className="bg-green-100 rounded-lg py-1  w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
+      <div className="bg-green-100 rounded-lg py-1 mt-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
         <h3 className="text-green-200 font-bold">{status}</h3>
       </div>
     );
   }
   if (status === "completed") {
     statusblock = (
-      <div className="bg-green-100 rounded-lg py-1  w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
+      <div className="bg-green-100 rounded-lg py-1 mt-4  w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
         <h3 className="text-green-200 font-bold">{status}</h3>
       </div>
     );
