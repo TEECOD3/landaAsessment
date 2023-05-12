@@ -36,23 +36,22 @@ const ShortCourseItem: FC<ShortCourseItemProps> = (props) => {
           className=" h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem]"
         />
 
-        <div className="flex md:flex-col mb-4 ">
+        <div className="flex md:flex-col mb-4 bg-red-200 flex-wrap ">
           <div className="flex-col flex text-sm md:text-base">
-            <h4 className="md:text-base text-blue-300 font-normal text-sm">
+            <h4 className=" capitalize text-base text-blue-300 font-normal">
               {program}
             </h4>
-            <p className="font-bold md:text-base text-base text-black-100">
+            <p className="font-bold md:text-base text-base text-black-100 ">
               {course}
             </p>
+            {status === "completed" ? (
+              <p></p>
+            ) : (
+              <div className="absolute md:static top-4 right-1">
+                <Progressbar progress={progress} />
+              </div>
+            )}
           </div>
-
-          {status === "completed" ? (
-            <p></p>
-          ) : (
-            <div className="absolute md:static top-4 right-2">
-              <Progressbar progress={progress} />
-            </div>
-          )}
         </div>
       </div>
 
