@@ -18,3 +18,27 @@ export const courseitemdata = [
     degree: "masters (BSc) in Computer Science",
   },
 ];
+
+export const shortcoursedata = [
+  {
+    id: 1,
+    program: "CIPD",
+    course: " C++ For Dummies",
+    progress: 80,
+    status: "inprogress",
+  },
+  {
+    id: 2,
+    program: "yolkshire",
+    course: "python for data analysis",
+    progress: 92,
+    status: "inprogress",
+  },
+  {
+    id: 3,
+    program: "Google",
+    course: "python for data analysis",
+    progress: 100,
+    status: "completed",
+  },
+];

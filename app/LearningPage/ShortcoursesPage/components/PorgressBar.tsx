@@ -12,11 +12,11 @@ const Progressbar: FC<ProgressbarProps> = (props: ProgressbarProps) => {
       <div className="w-[7rem] md:w-[17rem] flex items-center justify-center">
         <div className="w-full h-[5px] rounded-lg bg-gray mb-2">
           <div
-            className={`w-[${progress}%] h-full rounded-lg bg-blue-300  transition-all delay-150 duration-200 ease-in`}
+            className={`w-${progress}  h-full rounded-lg bg-blue-300 transition-all delay-150 duration-200 ease-in`}
           ></div>
         </div>
       </div>
-      <p className="text-sm font-bold ">{progress}% complete</p>
+      <p className="text-sm font-bold">{progress}% complete</p>
     </div>
   );
 };

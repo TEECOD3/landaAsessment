@@ -2,7 +2,7 @@ import { FC } from "react";
 import Input from "@/app/components/UI/input";
 import Filter from "@/public/icons/Filter";
 import ShortCourseItem from "./components/shortCourseItem";
-import SearchIcon from "@/public/icons/Searchicon";
+import { shortcoursedata } from "@/app/data";
 
 interface ShortpagesProps {}
 
@@ -25,8 +25,17 @@ const Shortpages: FC<ShortpagesProps> = () => {
           </div>
 
           <div className="mt-4 w-full">
-            <ShortCourseItem />
-            <ShortCourseItem />
+            {/* <ShortCourseItem />
+            <ShortCourseItem /> */}
+            {shortcoursedata.map((shortcourses) => (
+              <ShortCourseItem
+                key={shortcourses.id}
+                program={shortcourses.program}
+                course={shortcourses.course}
+                status={shortcourses.status}
+                progress={shortcourses.progress}
+              />
+            ))}
           </div>
         </div>
       </section>
