@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const Learning = () => {
   return (
     <>
-      <section className="w-full px-2 md:px-0">
+      <section className="w-full px-3 md:px-0">
         <div className="w-full lg:w-4/6 px-2">
           <div className="flex gap-4">
             <Input

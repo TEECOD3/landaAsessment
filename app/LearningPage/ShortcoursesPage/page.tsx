@@ -8,7 +8,7 @@ interface ShortpagesProps {}
 
 const Shortpages: FC<ShortpagesProps> = () => {
   return (
-    <div className="px-2 md:px-0">
+    <div className="px-3 md:px-0">
       <section className="px-1 md:px-0 w-full ">
         <div className="w-full lg:w-4/6 px-2 ">
           <div className="flex gap-4">

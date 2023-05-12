@@ -16,7 +16,7 @@ const Progressbar: FC<ProgressbarProps> = (props: ProgressbarProps) => {
           ></div>
         </div>
       </div>
-      <p className="text-sm font-semibold w-[5rem] md:w-full">
+      <p className="text-sm font-semibold w-[5rem] mt-2 md:w-full">
         <span>{progress}% complete</span>
       </p>
     </div>
