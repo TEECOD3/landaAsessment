@@ -14,7 +14,7 @@ export const courseitemdata = [
   {
     id: 3,
     university: "university of calabar",
-    status: "complete",
+    status: "completed",
     degree: "masters (BSc) in Computer Science",
   },
 ];
