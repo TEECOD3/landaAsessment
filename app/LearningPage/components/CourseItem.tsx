@@ -4,28 +4,30 @@ import Image from "next/image";
 import computerimg from "../../../public/computersciimg.png";
 
 interface CourseitemProps {
-  status: "suspended" | "completed" | "ongoing";
+  status: string;
+  school: string;
+  degree: string;
 }
 
 const Courseitem: FC<CourseitemProps> = (props: CourseitemProps) => {
-  const { status } = props;
+  const { status, school, degree } = props;
 
   let statusblock = (
     <div className="bg-orange-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
-      <h3 className="text-orange-200">ongoing</h3>
+      <h3 className="text-orange-200">{status}</h3>
     </div>
   );
   if (status === "suspended") {
     statusblock = (
       <div className="bg-green-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
-        <h3 className="text-green-200">suspended</h3>
+        <h3 className="text-green-200">{status}</h3>
       </div>
     );
   }
   if (status === "completed") {
     statusblock = (
       <div className="bg-green-100 rounded-lg py-2 px-4 w-[5rem] md:w-[6rem] flex item-center justify-center text-sm">
-        <h3 className="text-green-200">completed</h3>
+        <h3 className="text-green-200">{status}</h3>
       </div>
     );
   }
@@ -40,12 +42,8 @@ const Courseitem: FC<CourseitemProps> = (props: CourseitemProps) => {
         />
 
         <div className="flex flex-col mb-4">
-          <h4 className="text-base text-blue-300 font-normal">
-            University of Lagos
-          </h4>
-          <p className="font-bold text-base text-black-100">
-            Bachelor of Science (BSc) in Computer Science
-          </p>
+          <h4 className="text-base text-blue-300 font-normal">{school}</h4>
+          <p className="font-bold text-base text-black-100">{degree}</p>
         </div>
       </div>
 

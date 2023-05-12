@@ -18,7 +18,7 @@ const MobileNav = (props: mobilenav) => {
       animate={{ x: 0 }}
       className="z-[9000] fixed "
     >
-      <div className="h-[100vh] w-[100vw] bg-white z-[900] fixed">
+      <div className="h-[100vh] w-[100vw] bg-white z-[900] fixed md:hidden">
         <div className="min-h-[100%] border-r border-gray/40 bg-blue-100 flex flex-col justify-around  w-full">
           <div className="flex flex-col justify-between  p-5">
             <div className="p-4">
